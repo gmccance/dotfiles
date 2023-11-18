@@ -1,0 +1,23 @@
+# This is Git's per-user configuration file.
+[user]
+	name = Gavin McCance
+	email = gavin.mccance@cern.ch
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOcNxukZ+GRhmSk6nTEN0uEz6GpZpO1g4Uv4FM7SU77+
+
+[core]
+	autocrlf = input
+[diff]
+	colorMoved = zebra
+[fetch]
+	prune = true
+[filter "lfs"]
+	required = true
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+[gpg]
+	format = ssh
+[gpg "ssh"]
+	program = /Applications/1Password.app/Contents/MacOS/op-ssh-sign
+[commit]
+	gpgsign = true
